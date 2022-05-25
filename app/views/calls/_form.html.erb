@@ -1,0 +1,26 @@
+<%= form_with(model: call) do |form| %>
+  <% if call.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(call.errors.count, "error") %> prohibited this call from being saved:</h2>
+
+      <ul>
+        <% call.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= form.label :customer_name %>:
+    <%= form.text_field :customer_name %>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.label :video %>
+    <%= form.file_field :video, accept: "video/*" %>
+  </div>
+  <br>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

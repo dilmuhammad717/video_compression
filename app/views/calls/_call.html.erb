@@ -1,0 +1,11 @@
+<div id="<%= dom_id call %>">
+  <div>
+    <label>Customer Name:</label>
+    <%= call.customer_name %>
+  </div>
+  <br>
+  <video controls style="max-width: 500px">
+    <source src="<%= url_for(call.video) %>">
+  </video>
+</div>
+<br>
