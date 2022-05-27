@@ -53,5 +53,3 @@ development:
 production:
   <<: *default
   database: support_production
-  username: support
-  password: <%= ENV["SUPPORT_DATABASE_PASSWORD"] %>
