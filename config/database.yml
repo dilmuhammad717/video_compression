@@ -52,4 +52,5 @@ development:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
+  adapter: postgresql
   url: <%= ENV["DATABASE_URL"] %>
